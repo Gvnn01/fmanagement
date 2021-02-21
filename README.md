@@ -5,13 +5,14 @@
 -Opções de:
 	-Cadastro de lançamentos
 	-Cadastro de lançamentos mensais
+	<br/>
 	
 	![fmanagement1](https://user-images.githubusercontent.com/60143476/108613006-5914f380-73cc-11eb-8d14-7a195ca96e27.png)
-	
+	<br/><br/>
 	![fmanagement2](https://user-images.githubusercontent.com/60143476/108613008-603c0180-73cc-11eb-9e88-7c08906f5990.png)
-	
+	<br/><br/>
 	![fmanagement3](https://user-images.githubusercontent.com/60143476/108613009-6336f200-73cc-11eb-9966-233e845cdc35.png)
-	
+	<br/><br/>
 	
 	-Os lançamentos em roxo, sendo lançamento mensais, se atualizarão a cada mês
 	
