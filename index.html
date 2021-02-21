@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finances</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <img src="./assets/logo.svg" alt="logo">
+  </header>
+  <main class="container">
+    <section id="balance">
+      <h2 class="sr-only">Balanço</h2>
+      <div class="card">
+        <h3>
+          <span>Entradas</span>
+          <img src="./assets/income.svg" alt="Image de entrada">
+        </h3>
+        <p id="incomeDisplay">R$ 0,00</p>
+      </div>
+
+      <div class="card">
+        <h3>
+          <span>Saídas</span>
+          <img src="./assets/expense.svg" alt="Image de saída">
+        </h3>
+        <p id="expenseDisplay">R$ 0,00</p>
+      </div>
+
+      <div class="card total">
+        <h3>
+          <span>Total</span>
+          <img src="./assets/total.svg" alt="Image de total">
+        </h3>
+        <p id="totalDisplay">R$ 0,00</p>
+      </div>
+    </section>
+    <section id="transaction">
+      <h2 class="sr-only">Transações</h2>
+      <a href="#" onclick="Modal.open()" class="button new">+ Nova Transação</a>
+      <a href="#" onclick="Mensal.open()" class="button mens">+ Nova Mensalidade</a>
+      <div id="months">
+        <h2 id="currentMonth"></h2>
+        <table id="data-table">
+          <thead>
+            <tr>
+              <th>Descrição</th>
+              <th>Valor</th>
+              <th>Data</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-overlay">
+    <div class="modal">
+      <div class="form">
+        <h2>Nova transação</h2>
+        <form action="" onsubmit="Form.submit(event)">
+          <div class="input-group">
+            <label class="sr-only" for="description">Descrição</label>
+            <input type="text" id="description" name="description" placeholder="Descrição"/>
+          </div>
+          <div class="input-group">
+            <label class="sr-only" for="amount">Valor</label>
+            <input type="number" id="amount" step="0.01" name="amount" placeholder="0,00"/>
+            <small class="help">Use o sinal - (negativo) para despesas e , (virgula) para casas decimais</small>
+          </div>
+          <div class="input-group">
+            <label class="sr-only" for="date">Data</label>
+            <input type="date" id="date" name="date" placeholder="Data"/>
+          </div>
+          <div class="input-group actions">
+            <a href="#" onclick="Modal.close()" class="button cancel">Cancelar</a>
+            <button>Salvar</button>
+          </div>
+        </form>
+      c</div>
+    </div>
+  </div>
+  
+  <div class="mensal-overlay">
+    <div class="mensal">
+      <div class="form mens">
+        <h2>Nova transação mensal</h2>
+        <form action="" onsubmit="Mform.submit(event)">
+          <div class="input-group">
+            <label class="sr-only" for="mdescription">Descrição</label>
+            <input type="text" id="mdescription" name="mdescription" placeholder="Descrição"/>
+          </div>
+          <div class="input-group">
+            <label class="sr-only" for="mamount">Valor</label>
+            <input type="number" id="mamount" step="0.01" name="mamount" placeholder="0,00"/>
+            <small class="help">Use o sinal - (negativo) para despesas e , (virgula) para casas decimais</small>
+          </div>
+          <div class="input-group">
+            <label class="sr-only" for="mdate">Data</label>
+            <input type="number" id="mdate" min="1" max="31" step="1" name="mdate" placeholder="Data"/>
+            <small class="help">Defina o dia do mes que este lançamento vira</small>
+          </div>
+          <div class="input-group actions">
+            <a href="#" onclick="Mensal.close()" class="button cancel">Cancelar</a>
+            <button id="mensbutton">Salvar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer><p>Dev.Finances</p></footer>
+  <script src="./script.js"></script>
+</body>
+</html>
